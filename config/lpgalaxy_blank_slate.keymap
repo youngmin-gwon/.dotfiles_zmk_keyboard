@@ -23,6 +23,7 @@
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
+&mt { tapping-term-ms = <250>; };
 
 #define BT(n) BT_SEL n
 
@@ -99,8 +100,8 @@
             label = "Base";
             bindings = <
             //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-            //│   ESC      │   Q        │   W        │   E        │   R        │   T        │   Y        │   U        │   I        │   O        │   P        │  BACKSPACE │
-                 &kp ESC      &kp Q        &kp W        &kp E        &kp R         &kp T       &kp Y        &kp U        &kp I        &kp O        &kp P        &kp BKSP
+            //│   `        │   Q        │   W        │   E        │   R        │   T        │   Y        │   U        │   I        │   O        │   P        │  BACKSPACE │
+                 &kp GRAVE    &kp Q        &kp W        &kp E        &kp R         &kp T       &kp Y        &kp U        &kp I        &kp O        &kp P        &kp BKSP
             //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
             //│   TAB      │   A        │   OPT/S    │   CMD/D    │   SHFT/F   │   CTRL/G   │   CTRL/H   │   SHFT/J   │   CMD/K    │   OPT/L    │   ; :      │  ' "       │
                  &kp TAB      &kp A      &mt LALT S   &mt LGUI D   &mt LSHFT F  &mt LCTRL G  &mt RCTRL H  &mt RSHFT J  &mt RGUI K   &mt RALT L     &kp SEMI     &kp QUOT
