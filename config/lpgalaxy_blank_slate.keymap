@@ -112,7 +112,7 @@
                  &kp LSHFT    &kp Z        &kp X        &kp C        &kp V         &kp B       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH     &kp RET
             //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
             //│            │            │            │  TAB/SYM_L │  ESC/NUM_L │    SPACE   │   ENTER    │   NAV_L    │            │            │            │            │
-                 &mo BT_L     &trans       &trans    &lt SYM_L TAB &lt NUM_L ESC  &kp SPACE    &kp RET      &mo NAV_L    &trans       &trans       &trans     &ext_power EP_TOG
+                 &mo BT_L     &trans       &trans    &lt SYM_L TAB &lt NUM_L ESC  &kp SPACE    &kp RET      &mo NAV_L    &trans       &trans  &ext_power EP_ON &ext_power EP_OFF
             //╰────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────╯
             >;
         };
