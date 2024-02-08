@@ -20,7 +20,7 @@
 #define NAV_L 1
 #define NUM_L 2
 #define FUNC_L 3
-#define MSE_L 4
+#define MOS_L 4
 #define MDA_L 5
 #define BT_L 6
 
