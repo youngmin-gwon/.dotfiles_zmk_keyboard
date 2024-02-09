@@ -21,10 +21,6 @@
 #define BT_L 6
 #define BT(n) BT_SEL n
 
-&mt {
-      tapping-term-ms = <450>;
-};
-
 / {
     // ! Use this config when you need different keymap for your keyboard except ortho !
     // chosen {
@@ -57,15 +53,14 @@
     };
 
     behavior {
-      rpi: require_prior_idle {
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <2>;
-          flavor = "tap-preferred";
-          tapping-term-ms = <450>;
-          require-prior-idle-ms = <125>;
-          bindings = <&kp>, <&kp>;
+        lh_pht: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <400>;
+            bindings = <&kp>, <&kp>;
+        };
       };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -78,7 +73,7 @@
                  &kp Q        &kp W        &kp E        &kp R        &kp T          &trans      &trans       &kp Y        &kp U        &kp I        &kp O        &kp P
             //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
             //│   A        │  OPT/S     │  CMD/D     │  SHFT/F    │  CTRL/G    │            │            │   CTRL/H   │   SHFT/J   │   CMD/K    │   OPT/L    │   ; :      │
-                 &kp A     &lh_pht LALT S &lh_pht LGUI D &lh_pht LSHFT F &lh_pht LCTRL G      &trans      &trans    &lh_pht RCTRL H &lh_pht RSHFT J &lh_pht RGUI K &lh_pht RALT L     &kp SEMI
+                 &kp A     &lh_pht LALT S &lh_pht LGUI D &lh_pht LSHFT F &lh_pht LCTRL G      &trans      &trans    &lh_pht RCTRL H &lh_pht RSHFT J &lh_pht RGUI K &lh_pht RALT L  &kp SEMI
             //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
             //│   Z        │   X        │   C        │   V        │   B        │            │            │   N        │   M        │   , <      │   . >      │   / ?      │
                  &kp Z        &kp X        &kp C        &kp V        &kp B          &trans      &trans       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH
