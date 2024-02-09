@@ -22,7 +22,7 @@
 #define BT(n) BT_SEL n
 
 &mt {
-      tapping-term-ms = <350>;
+      tapping-term-ms = <450>;
 };
 
 / {
