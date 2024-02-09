@@ -2,14 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/ftc/ # <--- CHANGE REPO
-
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: mouse-ftc # <--- CHANGE REVISION
       import: app/west.yml
-    - name: blank-slate-zmk-module
-      remote: petejohanson
-      revision: main
   self:
     path: config
