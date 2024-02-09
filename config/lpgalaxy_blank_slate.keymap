@@ -34,6 +34,11 @@
             key-positions = <33 34>;
             bindings = <&kp SEMI>;
         };
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <27 32>;
+            bindings = <&caps_word>;
+        };
     };
 };
 
