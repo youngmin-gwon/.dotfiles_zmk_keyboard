@@ -70,7 +70,7 @@
           require-prior-idle-ms = <125>;
           bindings = <&kp>, <&kp>;
       };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
