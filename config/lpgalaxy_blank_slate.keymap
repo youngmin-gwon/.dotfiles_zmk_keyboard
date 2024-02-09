@@ -21,6 +21,10 @@
 #define BT_L 6
 #define BT(n) BT_SEL n
 
+&mt {
+      tapping-term-ms = <350>;
+};
+
 / {
     // ! Use this config when you need different keymap for your keyboard except ortho !
     // chosen {
@@ -62,11 +66,6 @@
           bindings = <&kp>, <&kp>;
       };
     };
-
-    &mt {
-      tapping-term-ms = <350>;
-    };
-
 
     keymap {
         compatible = "zmk,keymap";
