@@ -1,6 +1,6 @@
 manifest:
   remotes:
-    - name: zmkfirmware
+    - name: petejohanson
       url-base: https://github.com/ftc/ # <--- CHANGE REPO
 
   projects:
