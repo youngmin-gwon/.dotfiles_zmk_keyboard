@@ -22,6 +22,17 @@
 #define BT(n) BT_SEL n
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp LC(SPACE)>;
+        };
+    };
+};
+
+/ {
     // ! Use this config when you need different keymap for your keyboard except ortho !
     // chosen {
     //     zmk,matrix_transform =
