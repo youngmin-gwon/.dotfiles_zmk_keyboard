@@ -57,11 +57,16 @@
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           flavor = "balanced";
-          tapping-term-ms = <550>;
-          require-prior-idle-ms = <100>;
+          tapping-term-ms = <250>;
+          require-prior-idle-ms = <125>;
           bindings = <&kp>, <&kp>;
       };
     };
+
+    &mt {
+      tapping-term-ms = <350>;
+    };
+
 
     keymap {
         compatible = "zmk,keymap";
