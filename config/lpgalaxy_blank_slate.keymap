@@ -15,7 +15,7 @@
 
 #define NAV_L 1
 #define NUM_L 2
-#define FUNC_L 3
+#define FUN_L 3
 #define MOS_L 4
 #define MDA_L 5
 #define BT_L 6
@@ -97,10 +97,10 @@
                        &kp A     &lh_pht LALT S &lh_pht LGUI D &lh_pht LSHFT F &lh_pht LCTRL G &trans &trans  &lh_pht RCTRL H &lh_pht RSHFT J &lh_pht RGUI K &lh_pht RALT L  &kp SEMI
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│   Z        │   X        │   C        │   V        │   B        │            │            │   N        │   M        │   , <      │   . >      │   / ?      │
-                       &kp Z        &kp X        &kp C        &kp V        &kp B          &trans      &trans       &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH
+                       &kp Z        &kp X        &kp C        &kp V        &kp B          &trans      &trans       &kp N        &kp M       &kp COMMA    &kp DOT      &kp FSLH
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│            │            │ TAB/MDA_L  │ ESC/NAV_L  │  SPC/MOS_L │            │            │   ENTER    │  <-/NUM_L  │   BT_L     │            │            │
-                       &trans       &trans   &lt MDA_L TAB &lt NAV_L ESC &lt MOS_L SPACE  &trans      &trans       &kp RET   &lt NUM_L BKSP  &mo BT_L     &trans       &trans
+                       &trans       &trans   &lt MDA_L TAB &lt NAV_L ESC &lt MOS_L SPACE  &trans      &trans   &lt FUN_L RET &lt NUM_L BKSP &mo BT_L     &trans       &trans
                   //╰────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────╯
                   >;
             };
