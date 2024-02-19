@@ -74,7 +74,7 @@
       };
 
       behavior {
-            lh_pht: left_positional_hold_tap {
+            hm: home_row_mode {
                   compatible = "zmk,behavior-hold-tap";
                   #binding-cells = <2>;
                   flavor = "tap-preferred";
@@ -91,16 +91,16 @@
                   bindings = <
                   //╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
                   //│   Q        │   W        │   E        │   R        │   T        │            │            │   Y        │   U        │   I        │   O        │   P        │
-                       &kp Q        &kp W        &kp E        &kp R        &kp T          &trans      &trans       &kp Y        &kp U        &kp I        &kp O        &kp P
+                       &kp Q        &kp W        &kp E        &kp R        &kp T         &trans       &trans       &kp Y        &kp U        &kp I        &kp O        &kp P
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-                  //│   A        │  OPT/S     │  CMD/D     │  SHFT/F    │  CTRL/G    │            │            │   CTRL/H   │   SHFT/J   │   CMD/K    │   OPT/L    │   ; :      │
-                       &kp A     &lh_pht LALT S &lh_pht LGUI D &lh_pht LSHFT F &lh_pht LCTRL G &trans &trans  &lh_pht RCTRL H &lh_pht RSHFT J &lh_pht RGUI K &lh_pht RALT L  &kp SEMI
+                  //│  Globle/A  │  OPT/S     │  CMD/D     │  SHFT/F    │  CTRL/G    │            │            │   CTRL/H   │   SHFT/J   │   CMD/K    │   OPT/L    │   Globe/;  │
+                      &hm GLOBE A  &hm LALT S   &hm LGUI D   &hm LSHFT F  &hm LCTRL G    &trans       &trans     &hm RCTRL H  &hm RSHFT J  &hm RGUI K   &hm RALT L  &hm GLOBE SEMI
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│   Z        │   X        │   C        │   V        │   B        │            │            │   N        │   M        │   , <      │   . >      │   / ?      │
-                       &kp Z        &kp X        &kp C        &kp V        &kp B          &trans      &trans       &kp N        &kp M       &kp COMMA    &kp DOT      &kp FSLH
+                       &kp Z        &kp X        &kp C        &kp V        &kp B         &trans       &trans       &kp N        &kp M       &kp COMMA    &kp DOT      &kp FSLH
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-                  //│  Apple     │            │ TAB/MDA_L  │ ESC/NAV_L  │  SPC/MOS_L │            │            │   ENTER    │  <-/NUM_L  │   BT_L     │            │            │
-                       &kp GLOBE    &trans   &lt MDA_L TAB &lt NAV_L ESC &lt MOS_L SPACE  &trans      &trans   &lt FUN_L RET &lt NUM_L BKSP &mo BT_L     &trans       &trans
+                  //│            │            │ TAB/MDA_L  │ ESC/NAV_L  │  SPC/MOS_L │            │            │   ENTER    │  <-/NUM_L  │   BT_L     │            │            │
+                       &trans       &trans    &lt MDA_L TAB &lt NAV_L ESC &lt MOS_L SPACE  &trans     &trans   &lt FUN_L RET &lt NUM_L BKSP &mo BT_L     &trans       &trans
                   //╰────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────╯
                   >;
             };
