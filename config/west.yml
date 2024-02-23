@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: petejohanson
-      revision: features/soft-off-take-2
+      revision: features/soft-off-take-3
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
