@@ -12,5 +12,4 @@
 #     shield: reviung41
 #
 ---
-include:
-  - board: lpgalaxy_blank_slate
+board: [ "lpgalaxy_blank_slate" ]
