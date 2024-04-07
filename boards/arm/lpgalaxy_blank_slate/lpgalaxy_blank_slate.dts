@@ -65,28 +65,6 @@
 			;
 	};
 
-	soft_off_behavior_key {
-		compatible = "zmk,gpio-scanned-key-behavior-trigger";
-		status = "okay";
-		bindings = <&hw_soft_off>;
-		key = <&wakeup_key>;
-	};
-
-	soft_off_wakers {
-		compatible = "zmk,soft-off-wakeup-sources";
-		wakeup-sources = <&wakeup_source>;
-	};
-
-	soft_on_off {
-		compatible = "zmk,soft-on-off-gpio";
-
-		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-		wakeup-sources = <&kscan>;
-		output-gpios 
-			= <&gpio0 12 GPIO_ACTIVE_HIGH>
-			;
-	};
-
 	ortho_transform: ortho_transform {
 		compatible = "zmk,matrix-transform";
 		rows = <4>;
@@ -125,7 +103,7 @@
 	RC(6,0) RC(6,1) RC(6,2) RC(6,3)      RC(6,5)       RC(7,5)      RC(7,3) RC(7,2) RC(7,1) RC(7,0)
 	>;
 	};
-	
+
 	kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		wakeup-source;
