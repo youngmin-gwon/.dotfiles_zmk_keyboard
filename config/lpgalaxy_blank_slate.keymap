@@ -83,57 +83,6 @@
             };
       };
 
-	soft_off_behavior_key {
-		compatible = "zmk,gpio-scanned-key-behavior-trigger";
-		status = "okay";
-		bindings = <&hw_soft_off>;
-		key = <&wakeup_key>;
-	};
-
-	soft_off_wakers {
-		compatible = "zmk,soft-off-wakeup-sources";
-		wakeup-sources = <&wakeup_source>;
-	};
-
-	soft_on_off {
-		compatible = "zmk,soft-on-off-gpio";
-
-		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-		wakeup-sources = <&kscan>;
-		output-gpios
-			= <&gpio0 12 GPIO_ACTIVE_HIGH>
-			;
-	};
-
-	kscan0: kscan_0 {
-		compatible = "zmk,kscan-gpio-matrix";
-		wakeup-source;
-		label = "KSCAN";
-		debounce-press-ms = <1>;
-		debounce-release-ms = <5>;
-
-		diode-direction = "col2row";
-
-		col-gpios
-			= <&gpio0 12 (GPIO_ACTIVE_HIGH)>
-			, <&gpio1 9  (GPIO_ACTIVE_HIGH)>
-			, <&gpio0 8  (GPIO_ACTIVE_HIGH)>
-			, <&gpio1 8  (GPIO_ACTIVE_HIGH)>
-			, <&gpio0 11 (GPIO_ACTIVE_HIGH)>
-			, <&gpio0 6  (GPIO_ACTIVE_HIGH)>
-			;
-		row-gpios
-			= <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-	};
-
       keymap {
             compatible = "zmk,keymap";
 
