@@ -125,13 +125,13 @@
 	RC(6,0) RC(6,1) RC(6,2) RC(6,3)      RC(6,5)       RC(7,5)      RC(7,3) RC(7,2) RC(7,1) RC(7,0)
 	>;
 	};
-	
+
 	kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 		diode-direction = "col2row";
 		wakeup-source;
-		
+
 		debounce-press-ms = <1>;
 		debounce-release-ms = <5>;
 
