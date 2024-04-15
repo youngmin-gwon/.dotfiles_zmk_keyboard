@@ -128,12 +128,12 @@
 	
 	kscan: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
-		wakeup-source;
 		label = "KSCAN";
+		diode-direction = "col2row";
+		wakeup-source;
+		
 		debounce-press-ms = <1>;
 		debounce-release-ms = <5>;
-
-		diode-direction = "col2row";
 
 		col-gpios
 			= <&gpio0 12 (GPIO_ACTIVE_HIGH)>
