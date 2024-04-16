@@ -43,11 +43,6 @@
             key-positions = <27 32>;
             bindings = <&caps_word>;
         };
-        soft_off_combo {
-            timeout-ms = <50>;
-            key-positions = <36 47>;
-            bindings = <&soft_off>;
-        };
     };
 };
 
