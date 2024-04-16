@@ -21,6 +21,10 @@
 #define BT_L 6
 #define BT(n) BT_SEL n
 
+&soft_off {
+    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -39,11 +43,12 @@
             key-positions = <27 32>;
             bindings = <&caps_word>;
         };
+        soft_off_combo {
+            timeout-ms = <50>;
+            key-positions = <36 47>;
+            bindings = <&soft_off>;
+        };
     };
-};
-
-&soft_off {
-    hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
 / {
