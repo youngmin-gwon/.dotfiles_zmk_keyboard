@@ -27,7 +27,7 @@
 	};
 
 	behaviors {
-		hw_soft_off: behavior_hw_soft_off {
+		hw_soft_off: hw_soft_off {
 			compatible = "zmk,behavior-soft-off";
 			#binding-cells = <0>;
 			hold-time-ms = <3000>;
@@ -60,7 +60,7 @@
 
 		trigger = <&wakeup_key>;
 		wakeup-source;
-		extra-gpios 
+		extra-gpios
 			= <&gpio0 12 GPIO_ACTIVE_HIGH>
 			;
 	};
@@ -179,7 +179,7 @@
 		compatible = "zephyr,cdc-acm-uart";
 		label = "CDC_ACM_0";
 	};
-}; 
+};
 
 
 &flash0 {
