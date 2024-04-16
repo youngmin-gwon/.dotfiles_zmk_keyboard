@@ -173,12 +173,6 @@
 			, <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			, <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 			;
-
-		soft_off {
-            column = <0>;
-            row = <0>;
-            bindings = <&hw_soft_off>;
-        };
 	};
 };
 
