@@ -21,6 +21,10 @@
 #define BT_L 6
 #define BT(n) BT_SEL n
 
+&soft_off {
+    hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
     chosen {
        zmk,physical-layout =
