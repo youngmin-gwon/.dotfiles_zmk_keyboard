@@ -50,6 +50,10 @@
     };
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE>;
+};
+
 / {
     // ! Use this config when you need different keymap for your keyboard except ortho !
     // chosen {
