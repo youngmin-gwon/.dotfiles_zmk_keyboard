@@ -107,8 +107,8 @@
                   //│   Z        │   X        │   C        │   V        │   B        │            │            │   N        │   M        │   , <      │   . >      │   / ?      │
                        &kp Z        &kp X        &kp C        &kp V        &kp B         &trans       &trans       &kp N        &kp M       &kp COMMA    &kp DOT      &kp FSLH
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-                  //│            │            │ TAB/MDA_L  │ ESC/NAV_L  │  SPC/MOS_L │            │            │   ENTER    │  <-/NUM_L  │   BT_L     │            │            │
-                       &trans       &trans    &lt MDA_L TAB &lt NAV_L ESC &lt MOS_L SPACE  &trans     &trans   &lt FUN_L RET &lt NUM_L BKSP &mo BT_L     &trans       &trans
+                  //│            │  CAPS      │ TAB/MDA_L  │ ESC/NAV_L  │  SPC/MOS_L │            │            │   ENTER    │  <-/NUM_L  │   BT_L     │            │            │
+                       &trans     &kp CAPS    &lt MDA_L TAB &lt NAV_L ESC &lt MOS_L SPACE  &trans     &trans   &lt FUN_L RET &lt NUM_L BKSP &mo BT_L     &trans       &trans
                   //╰────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────╯
                   >;
             };
