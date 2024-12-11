@@ -21,28 +21,7 @@
 #define BT_L 6
 #define BT(n) BT_SEL n
 
-&soft_off {
-    hold-time-ms = <3000>; // Only turn off it the key is held for 5 seconds or longer.
-};
-
 / {
-    chosen {
-      zmk,kscan = &kscan0;
-    };
-
-    kscan0: kscan {
-      compatible = "zmk,gpio-key-wakeup-trigger";
-	wakeup-source;
-	trigger = <&wakeup_key>;
-    };
-
-    keys {
-      compatible = "gpio-keys";
-	wakeup_key: wakeup_key {
-	gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-	};
-    };
-
     combos {
         compatible = "zmk,combos";
         combo_esc {
