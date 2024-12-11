@@ -26,24 +26,20 @@
 };
 
 / {
-    chosen {
-       zmk,physical-layout =
-            #ifdef TBLE_DUAL_2U
-                       &layout_ortho_4x12_2x2u;
-            #elif defined(TBLE_MIT)
-                       &layout_ortho_4x12_1x2u;
-            #else
-                       &layout_ortho_4x12_all1u;
-            #endif
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
     };
+};
 
+/ {
     combos {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <32 33>;
             bindings = <&kp LC(SPACE)>;
-
         };
         combo_semicolon {
             timeout-ms = <50>;
@@ -58,25 +54,35 @@
     };
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
+&soft_off {
+    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
+
 / {
-    // ! Use this config when you need different keymap for your keyboard except ortho !
-    // chosen {
-    //     zmk,matrix_transform =
-    //         #ifdef TBLE_DUAL_2U
-    //            &dual_2u_transform;
-    //         #elif defined(TBLE_MIT)
-    //            &mit_transform;
-    //         #else
-    //            &ortho_transform;
-    //         #endif
-    // };
+      // ! Use this config when you need different keymap for your keyboard except ortho !
+      // chosen {
+      //  zmk,physical-layout =
+      //       #ifdef TBLE_DUAL_2U
+      //                  &layout_ortho_4x12_2x2u;
+      //       #elif defined(TBLE_MIT)
+      //                  &layout_ortho_4x12_1x2u;
+      //       #else
+      //                  &layout_ortho_4x12_all1u;
+      //       #endif
+      // };
+
 
       macros {
-            ZMK_MACRO(thumbs_up,
+            ZMK_MACRO(
+                  thumbs_up,
                   wait-ms = <1>;
                   tap-ms = <5>;
-                      bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
-                  )
+                        bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
+            )
       };
 
       tap_dances {
@@ -94,7 +100,7 @@
                   compatible = "zmk,behavior-hold-tap";
                   #binding-cells = <2>;
                   flavor = "tap-preferred";
-                  tapping-term-ms = <250>;
+                  tapping-term-ms = <150>;
                   bindings = <&kp>, <&kp>;
             };
       };
