@@ -22,6 +22,14 @@
 #define BT(n) BT_SEL n
 
 / {
+    kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         combo_esc {
