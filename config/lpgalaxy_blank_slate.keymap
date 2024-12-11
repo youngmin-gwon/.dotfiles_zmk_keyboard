@@ -32,6 +32,8 @@
 
     kscan0: kscan {
       compatible = "zmk,gpio-key-wakeup-trigger";
+	wakeup-source;
+
     };
 
     combos {
