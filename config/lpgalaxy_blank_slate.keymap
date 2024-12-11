@@ -51,7 +51,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE>;
+    continue-list = <UNDERSCORE MINUS>;
 };
 
 / {
