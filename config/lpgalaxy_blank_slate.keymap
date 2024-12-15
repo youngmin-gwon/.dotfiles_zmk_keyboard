@@ -186,11 +186,11 @@
                   //│            │            │            │            │            │            │            │            │            │            │            │            │
                         &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans      &trans       &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-                  //│            │            │            │            │            │            │            │     ←      │     ↓      │     ↑      │     →      │            │
+                  //│            │            │            │            │            │            │            │  Cursor  ← │  Cursor ↓  │  Cursor ↑  │  Cursor →  │            │
                         &trans       &trans       &trans       &trans       &trans       &trans      &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-                  //│            │            │            │            │            │            │            │            │            │            │            │            │
-                        &trans       &trans       &trans       &trans       &trans       &trans       &trans &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT  &trans
+                  //│            │            │            │            │            │            │            │  Scroll  ← │  Scroll ↓  │  Scroll ↑  │  Scroll →  │            │
+                        &trans       &trans       &trans       &trans       &trans       &trans       &trans &msc SCRL_RIGHT &msc SCRL_UP &msc SCRL_DOWN &msc SCRL_LEFT  &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│            │            │            │            │            │            │            │   RIGHT    │   LEFT     │   MIDDLE   │            │            │
                         &trans       &trans       &trans       &trans       &trans       &trans       &trans      &mkp RCLK    &mkp LCLK    &mkp MCLK     &trans      &trans
