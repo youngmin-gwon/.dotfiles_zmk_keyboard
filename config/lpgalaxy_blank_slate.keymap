@@ -4,10 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-// override mouse variable value
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-
 #include <behaviors.dtsi>
 
 #include <dt-bindings/zmk/keys.h>
@@ -207,7 +203,7 @@
                         &trans       &trans       &trans       &trans       &trans       &trans    &trans &mmv MOUSE_LEFT &mmv MOUSE_DOWN &mmv MOUSE_UP &mmv MOUSE_RIGHT &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│            │            │            │            │            │            │            │            │            │            │            │            │
-                        &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans      &trans       &trans
+                        &trans       &trans       &trans       &trans       &trans       &trans       &trans &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT  &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│            │            │            │            │            │            │            │   RIGHT    │   LEFT     │   MIDDLE   │            │            │
                         &trans       &trans       &trans       &trans       &trans       &trans       &trans      &mkp RCLK    &mkp LCLK    &mkp MCLK     &trans      &trans
