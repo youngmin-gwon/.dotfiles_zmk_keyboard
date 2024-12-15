@@ -4,12 +4,16 @@
  * SPDX-License-Identifier: MIT
  */
 
+// override mouse variable value
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <behaviors.dtsi>
 
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define TBLE_ORTHO   1
 
@@ -199,8 +203,8 @@
                   //│            │            │            │            │            │            │            │            │            │            │            │            │
                         &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans      &trans       &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-                  //│            │            │            │            │            │            │            │            │            │            │            │            │
-                        &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans      &trans
+                  //│            │            │            │            │            │            │            │     ←      │     ↓      │     ↑      │     →      │            │
+                        &trans       &trans       &trans       &trans       &trans       &trans    &trans &mmv MOUSE_LEFT &mmv MOUSE_DOWN &mmv MOUSE_UP &mmv MOUSE_RIGHT &trans
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│            │            │            │            │            │            │            │            │            │            │            │            │
                         &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans      &trans       &trans
