@@ -80,23 +80,12 @@
                         bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
             )
 
-            parenthesis_macro: parenthesis_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&lt NUM_L BKSP &kp N9>
-                , <&kp RPAR &kp LEFT>
-                ;
-            };
-
-            bracket_macro: bracket_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <1>;
-            bindings
-                  = <&kp LBKT>
-                  , <&kp RBKT &kp LEFT>
-                  ;
-            };
+            ZMK_MACRO(
+                  test,
+                  wait-ms = <1>;
+                  tap-ms = <5>;
+                        bindings = <&kp H &kp E &kp E &kp L &kp L &kp O>;
+            )
       };
 
       tap_dances {
