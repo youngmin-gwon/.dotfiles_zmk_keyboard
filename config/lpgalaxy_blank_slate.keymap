@@ -96,13 +96,6 @@
                   tap-ms = <5>;
                         bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
             )
-
-            ZMK_MACRO(
-                  test,
-                  wait-ms = <1>;
-                  tap-ms = <5>;
-                        bindings = <&kp H &kp E &kp E &kp L &kp L &kp O>;
-            )
       };
 
       tap_dances {
