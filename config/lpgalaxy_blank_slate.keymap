@@ -101,6 +101,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
+                = <&lt NUM_L BKSP &kp N9>
+                , <&kp RPAR &kp LEFT>
+                ;
+            };
+
+            parenthesis_macro: parenthesis_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
                   = <&kp LBKT>
                   , <&kp RBKT &kp LEFT>
                   ;
