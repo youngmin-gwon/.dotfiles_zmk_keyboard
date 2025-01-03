@@ -106,9 +106,9 @@
                 ;
             };
 
-            parenthesis_macro: parenthesis_macro {
+            bracket_macro: bracket_macro {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings
                   = <&kp LBKT>
                   , <&kp RBKT &kp LEFT>
