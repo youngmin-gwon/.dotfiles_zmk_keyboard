@@ -96,6 +96,16 @@
                   tap-ms = <5>;
                         bindings = <&kp PLUS &kp COLON &kp PLUS &kp N1 &kp COLON &kp RET>;
             )
+
+            parenthesis_macro: parenthesis_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                  = <&macro_press &kp LSHFT>
+                  , <&macro_tap &kp Z &kp M &kp K>
+                  , <&macro_release &kp LSHFT>
+                  ;
+            };
       };
 
       tap_dances {
