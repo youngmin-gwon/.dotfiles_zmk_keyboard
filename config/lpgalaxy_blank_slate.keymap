@@ -261,7 +261,7 @@
                        &kp Z        &kp X        &kp C        &kp V        &kp B         &trans       &trans       &kp N        &kp M       &kp COMMA    &kp DOT      &kp FSLH
                   //├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
                   //│            │  CAPS      │  TAB       │   ESC      │   SPC      │            │            │   ENTER    │    ←       │    ↓       │    ↑       │            │
-                       &trans     &kp CAPS       &kp TAB      &kp ESC     &kp SPACE      &trans       &trans     &kp RET   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP   &trans
+                       &trans     &kp CAPS       &kp TAB      &kp ESC     &kp SPACE      &trans       &trans     &kp RET        &kp LEFT     &kp DOWN     &kp UP      &kp RIGHT
                   //╰────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────┴────────────╯
                   >;
             };
